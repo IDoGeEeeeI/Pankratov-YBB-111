@@ -1,55 +1,55 @@
-#pragma once
+п»ї#pragma once
 #include <string>
 using namespace std;
 /**
-* \brief Класс зарплата
+* \brief РљР»Р°СЃСЃ Р·Р°СЂРїР»Р°С‚Р°
 */
 class Payment 
 {
 public:
     /**
-    * \brief Конструктор по умолчанию
+    * \brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
     */
     Payment();
     /**
-    * \brief Параметрический конструктор
-    * \param full_name : ФИО
-    * \param salary : оклад
-    * \param year_of_joining : год поступления на работу
-    * \param percentage_of_premium : процент надбавки
-    * \param number_of_days_worked_in_a_month : кол-во отработанных дней в месяце
+    * \brief РџР°СЂР°РјРµС‚СЂРёС‡РµСЃРєРёР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
+    * \param full_name : Р¤РРћ
+    * \param salary : РѕРєР»Р°Рґ
+    * \param year_of_joining : РіРѕРґ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ РЅР° СЂР°Р±РѕС‚Сѓ
+    * \param percentage_of_premium : РїСЂРѕС†РµРЅС‚ РЅР°РґР±Р°РІРєРё
+    * \param number_of_days_worked_in_a_month : РєРѕР»-РІРѕ РѕС‚СЂР°Р±РѕС‚Р°РЅРЅС‹С… РґРЅРµР№ РІ РјРµСЃСЏС†Рµ
     */
-    Payment(const string full_name,const float salary, const int year_of_joining, const float percentage_of_premium, const int number_of_days_worked_in_a_month);
+    Payment(const string full_name,const double salary, const int year_of_joining, const double percentage_of_premium, const int number_of_days_worked_in_a_month);
     /**
-    * \brief Деконструктор
+    * \brief Р”РµРєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
     */
     ~Payment();
    
 
 
     /**
-  * \brief Метод, возвращающий полное имя (ФИО)
-  * \return ФИО
+  * \brief РњРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РїРѕР»РЅРѕРµ РёРјСЏ (Р¤РРћ)
+  * \return Р¤РРћ
   */
     string getfull_name()const;
     /**
-   * \brief Метод, возвращающий оклад
-   * \return оклад 
+   * \brief РњРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РѕРєР»Р°Рґ
+   * \return РѕРєР»Р°Рґ 
    */
-    float getSalary()const;
+    double getSalary()const;
     /**
-   * \brief Метод, возвращающий год поступления на работу
-   * \return год поступления на работу 
+   * \brief РњРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РіРѕРґ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ РЅР° СЂР°Р±РѕС‚Сѓ
+   * \return РіРѕРґ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ РЅР° СЂР°Р±РѕС‚Сѓ 
    */
     int getYear_of_joining()const;
     /**
-   * \brief Метод, возвращающий процент надбавки
-   * \return процент надбавки
+   * \brief РњРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РїСЂРѕС†РµРЅС‚ РЅР°РґР±Р°РІРєРё
+   * \return РїСЂРѕС†РµРЅС‚ РЅР°РґР±Р°РІРєРё
    */
-    float getPercentage_of_premium()const;
+    double getPercentage_of_premium()const;
     /**
-   * \brief Метод, возвращающий кол-во отработанных дней в месяце
-   * \return кол-во отработанных дней в месяце
+   * \brief РњРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РєРѕР»-РІРѕ РѕС‚СЂР°Р±РѕС‚Р°РЅРЅС‹С… РґРЅРµР№ РІ РјРµСЃСЏС†Рµ
+   * \return РєРѕР»-РІРѕ РѕС‚СЂР°Р±РѕС‚Р°РЅРЅС‹С… РґРЅРµР№ РІ РјРµСЃСЏС†Рµ
    */
     int getNumber_of_days_worked_in_a_month()const;
     
@@ -57,70 +57,70 @@ public:
 
 
     /**
-      * \brief Метод, возвращающий 
-      * \param salary : оклад
-      * \param number_of_days_worked_in_a_month : кол-во отработанных дней в месяце
-      * \return Начисленную сумму
+      * \brief РњРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ 
+      * \param salary : РѕРєР»Р°Рґ
+      * \param number_of_days_worked_in_a_month : РєРѕР»-РІРѕ РѕС‚СЂР°Р±РѕС‚Р°РЅРЅС‹С… РґРЅРµР№ РІ РјРµСЃСЏС†Рµ
+      * \return РќР°С‡РёСЃР»РµРЅРЅСѓСЋ СЃСѓРјРјСѓ
       */
-    double calculate_the_accrued_amount(const float salary, const int number_of_days_worked_in_a_month) const;
+    double calculate_the_accrued_amount(const double salary, const int number_of_days_worked_in_a_month) const;
     /**
-      * \brief Метод, возвращающий
-      * \param accruals : начисленная сумма
-      * \param income_tax : подоходный налог
-      * \return Удержанная сумма
+      * \brief РњРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№
+      * \param accruals : РЅР°С‡РёСЃР»РµРЅРЅР°СЏ СЃСѓРјРјР°
+      * \param income_tax : РїРѕРґРѕС…РѕРґРЅС‹Р№ РЅР°Р»РѕРі
+      * \return РЈРґРµСЂР¶Р°РЅРЅР°СЏ СЃСѓРјРјР°
       */
-    double calculate_the_withheld_amount(const float accruals,const int income_tax) const;
+    double calculate_the_withheld_amount(const double accruals,const int income_tax) const;
     /**
-       * \brief Метод, возвращающий
-       * \param salary : оклад
-       * \param number_of_days_worked_in_a_month : кол-во отработанных дней в месяце
-       * \param income_tax : подоходный налог
-       * \return Зарплату 
+       * \brief РњРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№
+       * \param salary : РѕРєР»Р°Рґ
+       * \param number_of_days_worked_in_a_month : РєРѕР»-РІРѕ РѕС‚СЂР°Р±РѕС‚Р°РЅРЅС‹С… РґРЅРµР№ РІ РјРµСЃСЏС†Рµ
+       * \param income_tax : РїРѕРґРѕС…РѕРґРЅС‹Р№ РЅР°Р»РѕРі
+       * \return Р—Р°СЂРїР»Р°С‚Сѓ 
        */
-    double calculation_of_salary(const float salary, const int number_of_days_worked_in_a_month,const int income_tax) const;
+    double calculation_of_salary(const double salary, const int number_of_days_worked_in_a_month,const int income_tax) const;
     /**
-       * \brief Метод, возвращающий
-       * \param year_of_joining : год поступления на работу
-       * \return Стаж
+       * \brief РњРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№
+       * \param year_of_joining : РіРѕРґ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ РЅР° СЂР°Р±РѕС‚Сѓ
+       * \return РЎС‚Р°Р¶
        */
     int calculation_of_experience(const int year_of_joining) const;
 
 
 private:
     /**
-    * \brief ФИО
+    * \brief Р¤РРћ
     */
     string full_name;
     /**
-    * \brief оклад
+    * \brief РѕРєР»Р°Рґ
     */
-    float salary;
+    double salary;
     /**
-    * \brief год поступления на работу
+    * \brief РіРѕРґ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ РЅР° СЂР°Р±РѕС‚Сѓ
     */
     int year_of_joining;
     /**
-    * \brief процент надбавки
+    * \brief РїСЂРѕС†РµРЅС‚ РЅР°РґР±Р°РІРєРё
     */
-    float percentage_of_premium;
+    double percentage_of_premium;
     /**
-    * \brief подоходный налог
+    * \brief РїРѕРґРѕС…РѕРґРЅС‹Р№ РЅР°Р»РѕРі
     */
     int income_tax;
     /**
-    * \brief кол-во отработанных дней в месяце
+    * \brief РєРѕР»-РІРѕ РѕС‚СЂР°Р±РѕС‚Р°РЅРЅС‹С… РґРЅРµР№ РІ РјРµСЃСЏС†Рµ
     */
     int number_of_days_worked_in_a_month;
     /**
-    * \brief кол-во рабочих дней в месяце
+    * \brief РєРѕР»-РІРѕ СЂР°Р±РѕС‡РёС… РґРЅРµР№ РІ РјРµСЃСЏС†Рµ
     */
     int number_of_working_days_in_a_month;
     /**
-    * \brief начисленная сумма
+    * \brief РЅР°С‡РёСЃР»РµРЅРЅР°СЏ СЃСѓРјРјР°
     */
-    float accruals;
+    double accruals;
     /**
-    * \brief удержанная сумма
+    * \brief СѓРґРµСЂР¶Р°РЅРЅР°СЏ СЃСѓРјРјР°
     */
-    float withheld;
+    double withheld;
 };
