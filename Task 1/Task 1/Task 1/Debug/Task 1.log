@@ -1,3 +1,4 @@
-﻿  main.cpp
-MSVCRTD.lib(exe_main.obj) : error LNK2019: ссылка на неразрешенный внешний символ _main в функции "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ).
-C:\Users\Дмитрий\Documents\GitHub\proga\Task 1\Task 1\Debug\Task 1.exe : fatal error LNK1120: неразрешенных внешних элементов: 1
+﻿  Pay.cpp
+C:\Users\Дмитрий\Documents\GitHub\proga\Task 1\Task 1\Task 1\Pay.cpp(7,10): error C2039: "Work": не является членом "Payment".
+C:\Users\Дмитрий\Documents\GitHub\proga\Task 1\Task 1\Task 1\Payment.h(7): message : см. объявление "Payment"
+C:\Users\Дмитрий\Documents\GitHub\proga\Task 1\Task 1\Task 1\Pay.cpp(8,1): fatal error C1004: непредвиденное обнаружение конца файла

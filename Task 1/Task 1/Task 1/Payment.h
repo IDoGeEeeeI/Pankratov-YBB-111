@@ -8,22 +8,22 @@ class Payment
 {
 public:
     /**
-    * \brief Конструктор по умолчанию
-    */
-    Payment();
-    /**
     * \brief Параметрический конструктор
-    * \param full_name : ФИО
+    * \param fullName : ФИО
     * \param salary : оклад
-    * \param year_of_joining : год поступления на работу
-    * \param percentage_of_premium : процент надбавки
-    * \param number_of_days_worked_in_a_month : кол-во отработанных дней в месяце
+    * \param yearJoining : год поступления на работу
+    * \param percentagePremium : процент надбавки
+    * \param incomeTax : подоходный налог
+    * \param numberDaysWorkedInMonth : кол-во отработанных дней в месяце
+    * \param dayMonth : кол-во дней в месяце
+    * \param accruals : начисленная сумма
+    * \param withheld : удержанная сумма
     */
-    Payment(const string full_name,const double salary, const int year_of_joining, const double percentage_of_premium, const int number_of_days_worked_in_a_month);
+    Payment(const string fullName,const double salary, const int yearJoining, const double percentagePremium,const int incomeTax, const int numberDaysWorkedInMonth, const int dayMonth, const double accruals,const double withheld);
     /**
     * \brief Деконструктор
     */
-    ~Payment();
+    ~Payment() =default;
    
 
 
@@ -31,7 +31,7 @@ public:
   * \brief Метод, возвращающий полное имя (ФИО)
   * \return ФИО
   */
-    string getfull_name()const;
+    string getFullName()const;
     /**
    * \brief Метод, возвращающий оклад
    * \return оклад 
@@ -41,17 +41,17 @@ public:
    * \brief Метод, возвращающий год поступления на работу
    * \return год поступления на работу 
    */
-    int getYear_of_joining()const;
+    int getYearJoining()const;
     /**
    * \brief Метод, возвращающий процент надбавки
    * \return процент надбавки
    */
-    double getPercentage_of_premium()const;
+    double getPercentagePremium()const;
     /**
    * \brief Метод, возвращающий кол-во отработанных дней в месяце
    * \return кол-во отработанных дней в месяце
    */
-    int getNumber_of_days_worked_in_a_month()const;
+    int getNumberDaysWorkedInMonth()const;
     
 
 
@@ -59,38 +59,38 @@ public:
     /**
       * \brief Метод, возвращающий 
       * \param salary : оклад
-      * \param number_of_days_worked_in_a_month : кол-во отработанных дней в месяце
+      * \param numberDaysWorkedInMonth : кол-во отработанных дней в месяце
       * \return Начисленную сумму
       */
-    double calculate_the_accrued_amount(const double salary, const int number_of_days_worked_in_a_month) const;
+    double calculateTheAccruedAmount(const double salary, const int numberDaysWorkedInMonth) const;
     /**
       * \brief Метод, возвращающий
       * \param accruals : начисленная сумма
-      * \param income_tax : подоходный налог
+      * \param incomeTax : подоходный налог
       * \return Удержанная сумма
       */
-    double calculate_the_withheld_amount(const double accruals,const int income_tax) const;
+    double calculateTheWithheldAmount(const double accruals,const int incomeTax) const;
     /**
        * \brief Метод, возвращающий
        * \param salary : оклад
-       * \param number_of_days_worked_in_a_month : кол-во отработанных дней в месяце
-       * \param income_tax : подоходный налог
+       * \param numberDaysWorkedInMonth : кол-во отработанных дней в месяце
+       * \param incomeTax : подоходный налог
        * \return Зарплату 
        */
-    double calculation_of_salary(const double salary, const int number_of_days_worked_in_a_month,const int income_tax) const;
+    double calculationSalary(const double salary, const int numberDaysWorkedInMonth,const int incomeTax) const;
     /**
        * \brief Метод, возвращающий
-       * \param year_of_joining : год поступления на работу
+       * \param yearJoining : год поступления на работу
        * \return Стаж
        */
-    int calculation_of_experience(const int year_of_joining) const;
+    int calculationExperience(const int yearJoining) const;
 
 
 private:
     /**
     * \brief ФИО
     */
-    string full_name;
+    string fullName;
     /**
     * \brief оклад
     */
@@ -98,23 +98,23 @@ private:
     /**
     * \brief год поступления на работу
     */
-    int year_of_joining;
+    int yearJoining;
     /**
     * \brief процент надбавки
     */
-    double percentage_of_premium;
+    double percentagePremium;
     /**
     * \brief подоходный налог
     */
-    int income_tax;
+    int incomeTax;
     /**
     * \brief кол-во отработанных дней в месяце
     */
-    int number_of_days_worked_in_a_month;
+    int numberDaysWorkedInMonth;
     /**
     * \brief кол-во рабочих дней в месяце
     */
-    int number_of_working_days_in_a_month;
+    int dayMonth;
     /**
     * \brief начисленная сумма
     */
