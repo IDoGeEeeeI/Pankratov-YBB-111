@@ -5,7 +5,6 @@
 //  Created by Дмитрий Панкратов on 26.05.2021.
 //
 
-#include <stdio.h>
 #include "Header.h"
 #include <iostream>
 using namespace std;
@@ -25,4 +24,3 @@ Long me0ow4(6,7);
     cout<<"вычитание(Long) = ("<<me0ow3-me0ow4<<")"<<endl;
     cout<<"умножение(Long) = ("<<me0ow3*me0ow4<<")"<<endl;
 }
-

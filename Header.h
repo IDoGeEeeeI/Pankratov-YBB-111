@@ -40,7 +40,7 @@ class Pair
         *\param second : второе число
         */
         Pair(int first, int second);
-    
+//      Pair(Pair& other)=default;// тип хз что с этим делать, у меня от этого ничего не робит
         /**
         * \brief Деконструктор
         */
@@ -48,21 +48,21 @@ class Pair
         /**
         * \brief Метод, устанавливает первое число
         */
-        void SetFirst(int first);
+        virtual void SetFirst(int first);
         /**
         * \brief Метод, устанавливает второе число
         */
-        void SetSecond(int second);
+        virtual void SetSecond(int second);
         /**
         * \brief Метод, возвращающий первое число
         * \return первое число
         */
-        int GetFirst() const;
+        virtual int GetFirst() const;
             /**
             * \brief Метод, возвращающий второе число
             * \return второе число
             */
-        int GetSecond() const;
+        virtual int GetSecond() const;
             /**
             * \brief Метод определения оператора сложения
             */
@@ -81,49 +81,13 @@ class Pair
 /**
 * \brief Класс Long наследуется от Pair
 */
-class Long : public Pair {
-    
-    protected:
-        /**
-        * \brief первое число
-        */
-        int first;
-        /**
-        * \brief второе число
-        */
-        int second;
+class Long : virtual public Pair {
+
 
 
     public:
-
+       // Long()=default;
         Long(int first, int second);
-
-        /**
-        * \brief Метод, устанавливает первое число
-        */
-        void setFirst(int first);
-        /**
-        * \brief Метод, устанавливает второе число
-        */
-        void setSecond(int second);
-        /**
-        * \brief Метод, возвращающий первое число
-        * \return первое число
-        */
-    
-        /**
-        * \brief Метод, возвращающий первое число
-        * \return первое число
-        */
-        int getFirst() const;
-        /**
-        * \brief Метод, возвращающий второе число
-        * \return второе число
-        */
-        int getSecond() const;
-    
-        
-
         /**
         * \brief Метод определение оператора умножения
         *\return переопределенный оператор умножения
