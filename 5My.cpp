@@ -38,28 +38,28 @@ struct point {
 */
     bool length1(const point& p1, const point& p2) {
         if ((p1.A*p2.B-p2.A*p1.B)==0) throw 'e';
-        return true;
+        return false;
     };
 /**
 * \brief  exception со спецификацией throw()
 */
     bool length2(const point& p1, const point& p2) throw() {
         if ((p1.A*p2.B-p2.A*p1.B)==0) throw 'e';
-        return true;
+        return false;
     };
 /**
 * \brief  exception с конкретной спецификацией с подходящим стандартным исключением
 */
     bool length3(const point& p1, const point& p2) throw(invalid_argument) {
         if ((p1.A*p2.B-p2.A*p1.B)==0) throw invalid_argument("Error, points are the same\n");
-        return true;
+        return false;
     }
 /**
 * \brief  exception с собственным реализованным исключением myException
 */
     bool length4_1(const point& p1, const point& p2) throw(myException) {
         if ((p1.A*p2.B-p2.A*p1.B)==0) throw myException("Error, points are the same\n");
-        return true;
+        return false;
     }
 /**
 * \brief  Спецификация с собственным реализованным исключением (пустой класс)
@@ -70,7 +70,7 @@ struct point {
 */
     bool length4_2(const point& p1, const point& p2) throw(nullException) {
         if ((p1.A*p2.B-p2.A*p1.B)==0) throw nullException();
-        return true;
+        return false;
     }
 /**
 * \brief  Спецификация с собственным реализованным исключением (наследник от стандартного исключения с полями)
@@ -87,7 +87,7 @@ struct point {
 */
     bool length4_3(const point& p1, const point& p2) {
         if ((p1.A*p2.B-p2.A*p1.B)==0) throw InvalidValue();
-        return true;
+        return false;
     }
 
 
@@ -108,7 +108,7 @@ struct point {
         try {
             double length;
             length= length1(p1, p2);
-            if(length4_1(p1, p2)==true){
+            if(length4_1(p1, p2)==false){
                 cout<<"линии существуют - "<<p1.A<<"x"<<p1.B<<"y"<<p1.C<<"=0"<<" и ";
                 cout<<p2.A<<"x"<<p2.B<<"y"<<p2.C<<"=0"<<endl;
             }
@@ -122,7 +122,7 @@ struct point {
         try {
             double length;
             length = length2(p1, p2);
-            if(length4_1(p1, p2)==true){
+            if(length4_1(p1, p2)==false){
                 cout<<"линии существуют - "<<p1.A<<"x"<<p1.B<<"y"<<p1.C<<"=0"<<" и ";
                 cout<<p2.A<<"x"<<p2.B<<"y"<<p2.C<<"=0"<<endl;
             }
@@ -136,7 +136,7 @@ struct point {
         try {
             double length;
             length = length3(p1, p2);
-            if(length4_1(p1, p2)==true){
+            if(length4_1(p1, p2)==false){
                 cout<<"линии существуют - "<<p1.A<<"x"<<p1.B<<"y"<<p1.C<<"=0"<<" и ";
                 cout<<p2.A<<"x"<<p2.B<<"y"<<p2.C<<"=0"<<endl;
             }
@@ -150,7 +150,7 @@ struct point {
         try {
             double length;
             length = length4_1(p1, p2);
-            if(length4_1(p1, p2)==true){
+            if(length4_1(p1, p2)==false){
                 cout<<"линии существуют - "<<p1.A<<"x"<<p1.B<<"y"<<p1.C<<"=0"<<" и ";
                 cout<<p2.A<<"x"<<p2.B<<"y"<<p2.C<<"=0"<<endl;
             }
@@ -164,7 +164,7 @@ struct point {
         try {
             double length;
             length = length4_2(p1, p2);
-            if(length4_1(p1, p2)==true){
+            if(length4_1(p1, p2)==false){
                 cout<<"линии существуют - "<<p1.A<<"x"<<p1.B<<"y"<<p1.C<<"=0"<<" и ";
                 cout<<p2.A<<"x"<<p2.B<<"y"<<p2.C<<"=0"<<endl;
             }
@@ -178,7 +178,7 @@ struct point {
         try {
             double length;
             length = length4_3(p1, p2);
-            if(length4_1(p1, p2)==true){
+            if(length4_1(p1, p2)==false){
                 cout<<"линии существуют - "<<p1.A<<"x"<<p1.B<<"y"<<p1.C<<"=0"<<" и ";
                 cout<<p2.A<<"x"<<p2.B<<"y"<<p2.C<<"=0"<<endl;
             }
