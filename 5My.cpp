@@ -11,12 +11,16 @@
 
 #include <iostream>
 #include<cmath>
+#include "Double.hpp"
+
 using namespace std;
 struct point {
     double A;
     double B;
     double C;
 };
+
+
 /**
 * \brief Класс myException для работы c exception
 */
@@ -97,7 +101,6 @@ struct point {
 
     int main()
     {
-        
         point p1, p2;
         cout << "Enter A1, B1, C1: ";
         cin >>p1.A>>p1.B>>p1.C;
