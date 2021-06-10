@@ -23,8 +23,8 @@ public:
     double b;
     
     _Double_(double a,double b);
-    void seta(double a);
-    void setb(double b);
+    void seta(const double a);
+    void setb(const double b);
     double geta() const;
     double getb() const;
 

@@ -16,10 +16,10 @@ using namespace std;
         this->a=a;
         this->b=b;
     }
-    void _Double_::seta(double A){
+    void _Double_::seta(const double A){
         this->a=A;
     }
-    void _Double_::setb(double B){
+    void _Double_::setb(const double B){
         this->b=B;
     }
    double _Double_::geta() const {
