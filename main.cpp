@@ -8,7 +8,7 @@
 #include "Header.h"
 #include <iostream>
 #define _USE_MATH_DEFINES
-#include <math.h>
+#include <cmath>
 
 Func::Func(const double a):a(a){}
 
@@ -32,7 +32,7 @@ std::istream& operator>>(std::istream& in, Func& f)
 
 std::ostream& operator<<(std::ostream& out, const Func& f)
 {
-    out << "Value:  " << f.getA() << std::endl;
+    out << "Value:  " << f.getA()<<"\n";
     return out;
 }
 
@@ -43,9 +43,9 @@ double Function::getFunc(const double a) const
 
 Function::Function(const double a)
 {
-    if (a > 1 | a < 0) throw "invalid_argument";
+    if (abs(a)<=1.) throw "invalid_argument";// if что ли нужно в сет А положить,но хз
     setA(a);
-    SetCosec();
+    SetSec();
     SetCosec();
     SetDerSec();
     SetDerCosec();
@@ -63,26 +63,22 @@ void Function::setA(const double a)
 
 void Function::SetSec()
 {
-    //this->Sec = asin(getA());
     this->Sec = 1/(acos(getA()));
 }
 
 void Function::SetCosec()
 {
-    //this->Cosec = acos(getA());
     this->Cosec = 1/(asin(getA()));
 }
 
 void Function::SetDerSec()
 {
-    //this->DerSec = 1 / sqrt(1 - pow(getA(), 2));
     this->DerSec = atan(getA()) * 1/(acos(getA()));
 
 }
 
 void Function::SetDerCosec()
 {
-    //this->DerCosec = -getDerSec();
     this->DerSec = -1*(acos(getA()/asin(getA()))) * 1/(asin(getA()));
 
     
@@ -118,10 +114,10 @@ std::istream& operator>>(std::istream& in, Function& f)
 
 std::ostream& operator<<(std::ostream& out, const Function& funct)
 {
-    out << "Sec(x)= " << funct.getSec() << std::endl
-        << "Sec(x)'= " << funct.getDerSec() << std::endl
-        << "Cosec(x)= " << funct.getCosec() << std::endl
-        << "Cosec(x)'= " << funct.getDerCosec() << std::endl;
+    out << "Sec(x)= " << funct.getSec() <<"\n"
+    << "Sec(x)'= " << funct.getDerSec() <<"\n"
+        << "Cosec(x)= " << funct.getCosec() <<"\n"
+        << "Cosec(x)'= " << funct.getDerCosec() <<"\n";
     return out;
 }
 
