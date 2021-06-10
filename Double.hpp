@@ -22,7 +22,7 @@ public:
     double a;
     double b;
     
-    _Double_(double a,double b);
+    _Double_(const double a,const double b);
     void seta(const double a);
     void setb(const double b);
     double geta() const;

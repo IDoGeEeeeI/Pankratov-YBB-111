@@ -11,7 +11,7 @@
 using namespace std;
 
 
-    _Double_::_Double_(double a,double b)
+    _Double_::_Double_(const double a,const double b)
     {
         this->a=a;
         this->b=b;
