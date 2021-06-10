@@ -23,10 +23,12 @@ public:
     double b;
     
     _Double_(const double a,const double b);
+    virtual ~_Double_() = default;
     void seta(const double a);
     void setb(const double b);
     double geta() const;
     double getb() const;
+    
 
 };
 
