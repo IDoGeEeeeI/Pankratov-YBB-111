@@ -4,10 +4,10 @@
 //
 //  Created by Дмитрий Панкратов on 27.05.2021.
 //
+#define _USE_MATH_DEFINES
 
 #include "Header.h"
 #include <iostream>
-#define _USE_MATH_DEFINES
 #include <cmath>
 
 Func::Func(const double a):a(a){}
@@ -43,7 +43,7 @@ double Function::getFunc(const double a) const
 
 Function::Function(const double a)
 {
-    if (abs(a)<=1.) throw "invalid_argument";// if что ли нужно в сет А положить,но хз
+    if (abs(a)>=1.) throw "invalid_argument";
     setA(a);
     SetSec();
     SetCosec();
